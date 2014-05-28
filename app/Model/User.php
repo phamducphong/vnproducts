@@ -5,17 +5,12 @@ App::uses('AppModel', 'Model');
  *
  */
 class User extends AppModel {
-<<<<<<< HEAD
-=======
-	public $name = 'Users';
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 
 /**
  * Use database config
  *
  * @var string
  */
-<<<<<<< HEAD
 	public $useDbConfig = 'vnproducts';
 
 /**
@@ -24,16 +19,7 @@ class User extends AppModel {
  * @var mixed False or table name
  */
 	public $useTable = 'user';
-=======
-	public $useDbConfig = 'test';
 
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'name';
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 
 /**
  * Validation rules
@@ -41,7 +27,6 @@ class User extends AppModel {
  * @var array
  */
 	public $validate = array(
-<<<<<<< HEAD
 		'firstname' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
@@ -111,9 +96,6 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-=======
-		'username' => array(
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -123,11 +105,7 @@ class User extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-<<<<<<< HEAD
 		'phone' => array(
-=======
-		'password' => array(
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -137,7 +115,6 @@ class User extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-<<<<<<< HEAD
 		'joindate' => array(
 			'datetime' => array(
 				'rule' => array('datetime'),
@@ -149,15 +126,4 @@ class User extends AppModel {
 			),
 		),
 	);
-=======
-	);
-	
-	public function beforeSave($options = array()){
-		$this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
-		return true;
-	}
-	
-	
-	
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 }

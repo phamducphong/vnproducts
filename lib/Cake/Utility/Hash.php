@@ -1037,11 +1037,8 @@ class Hash {
 
 		if ($options['root']) {
 			$root = $options['root'];
-<<<<<<< HEAD
 		} elseif (!$return) {
 			return array();
-=======
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		} else {
 			$root = self::get($return[0], $parentKeys);
 		}

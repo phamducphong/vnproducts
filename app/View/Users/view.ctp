@@ -6,7 +6,6 @@
 			<?php echo h($user['User']['id']); ?>
 			&nbsp;
 		</dd>
-<<<<<<< HEAD
 		<dt><?php echo __('Firstname'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['firstname']); ?>
@@ -50,16 +49,6 @@
 		<dt><?php echo __('Joindate'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['joindate']); ?>
-=======
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['username']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Password'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['password']); ?>
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 			&nbsp;
 		</dd>
 	</dl>
@@ -68,11 +57,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['id'])); ?> </li>
-<<<<<<< HEAD
 		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
-=======
-		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
 	</ul>

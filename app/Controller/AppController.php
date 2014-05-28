@@ -31,8 +31,5 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-<<<<<<< HEAD
-=======
 	public $components = array('DebugKit.Toolbar');
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 }

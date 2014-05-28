@@ -56,11 +56,7 @@ class Inflector {
 			'/$/' => 's',
 		),
 		'uninflected' => array(
-<<<<<<< HEAD
 			'.*[nrlm]ese', '.*deer', '.*fish', '.*measles', '.*ois', '.*pox', '.*sheep', 'people', 'feedback'
-=======
-			'.*[nrlm]ese', '.*deer', '.*fish', '.*measles', '.*ois', '.*pox', '.*sheep', 'people'
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		),
 		'irregular' => array(
 			'atlas' => 'atlases',
@@ -147,11 +143,7 @@ class Inflector {
 			'/s$/i' => ''
 		),
 		'uninflected' => array(
-<<<<<<< HEAD
 			'.*[nrlm]ese', '.*deer', '.*fish', '.*measles', '.*ois', '.*pox', '.*sheep', '.*ss', 'feedback'
-=======
-			'.*[nrlm]ese', '.*deer', '.*fish', '.*measles', '.*ois', '.*pox', '.*sheep', '.*ss'
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		),
 		'irregular' => array(
 			'foes' => 'foe',

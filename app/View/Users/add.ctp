@@ -3,7 +3,6 @@
 	<fieldset>
 		<legend><?php echo __('Add User'); ?></legend>
 	<?php
-<<<<<<< HEAD
 		echo $this->Form->input('firstname');
 		echo $this->Form->input('surname');
 		echo $this->Form->input('age');
@@ -13,10 +12,6 @@
 		echo $this->Form->input('email');
 		echo $this->Form->input('phone');
 		echo $this->Form->input('joindate');
-=======
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -272,33 +272,18 @@ HTMLBLOC;
 		$this->assertTextEquals($expected, DebugCompTransport::$lastEmail);
 
 		$this->Controller->EmailTest->sendAs = 'both';
-<<<<<<< HEAD
 		$expected = str_replace('{CONTENTTYPE}', 'multipart/alternative; boundary="{boundary}"', $header);
 		$expected .= "--{boundary}\n" .
-=======
-		$expected = str_replace('{CONTENTTYPE}', 'multipart/mixed; boundary="{boundary}"', $header);
-		$expected .= "--{boundary}\n" .
-			'Content-Type: multipart/alternative; boundary="alt-{boundary}"' . "\n\n" .
-			'--alt-{boundary}' . "\n" .
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
+
 			'Content-Type: text/plain; charset=UTF-8' . "\n" .
 			'Content-Transfer-Encoding: 8bit' . "\n\n" .
 			$text .
 			"\n\n" .
-<<<<<<< HEAD
 			'--{boundary}' . "\n" .
 			'Content-Type: text/html; charset=UTF-8' . "\n" .
 			'Content-Transfer-Encoding: 8bit' . "\n\n" .
 			$html .
 			"\n\n\n" .
-=======
-			'--alt-{boundary}' . "\n" .
-			'Content-Type: text/html; charset=UTF-8' . "\n" .
-			'Content-Transfer-Encoding: 8bit' . "\n\n" .
-			$html .
-			"\n\n" .
-			'--alt-{boundary}--' . "\n\n\n" .
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 			'--{boundary}--' . "\n";
 
 		$expected = '<pre>' . $expected . '</pre>';

@@ -69,11 +69,9 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-<<<<<<< HEAD
 
-=======
 CakePlugin::load('DebugKit');
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
+
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
  *

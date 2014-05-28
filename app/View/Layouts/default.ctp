@@ -22,26 +22,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription; ?>:
-=======
-	<?php 
-	// Css
-	echo $this->Html->css('jquery-ui-1.10.4.css');
-	// jQuery
-	echo $this->Html->script('jquery-2.1.1.js', array( 'inline' => 'false'));
-	echo $this->Html->script('jquery-ui-1.10.4.js', array('inline' => 'false'));
-	echo $this->Html->script('jquery-ui-1.10.4.min.js', array('inline' => 'false'));
-	// Jsヘルパーが生成するJSを出力させる
-	echo $this->Js->writeBuffer( array( 'inline' => 'true'));
-	?>
-	
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -53,19 +36,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-<<<<<<< HEAD
-=======
-	
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 </head>
 <body>
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-<<<<<<< HEAD
-=======
-			<h1><?php echo $this->Html->link('Home','index');?></h1>
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		</div>
 		<div id="content">
 

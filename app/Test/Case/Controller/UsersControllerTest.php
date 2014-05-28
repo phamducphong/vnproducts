@@ -16,7 +16,6 @@ class UsersControllerTest extends ControllerTestCase {
 		'app.user'
 	);
 
-<<<<<<< HEAD
 /**
  * testIndex method
  *
@@ -61,7 +60,4 @@ class UsersControllerTest extends ControllerTestCase {
 	public function testDelete() {
 		$this->markTestIncomplete('testDelete not implemented.');
 	}
-
-=======
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 }

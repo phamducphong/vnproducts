@@ -19,10 +19,6 @@
  */
 
 App::uses('AppController', 'Controller');
-<<<<<<< HEAD
-=======
-App::uses('CakeEmail', 'Network/Email');
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 
 /**
  * Static content controller
@@ -78,30 +74,4 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
-<<<<<<< HEAD
-=======
-	
-	
-	// CakeEmail
-	public $components = array('Session');
-	
-	public function contact(){
-		$this->loadModel('Contact');
-		echo 'test1 ';
-		if ($this->request->is('post')){
-			echo 'test2 ';
-			$email = new CakeEmail();
-			$email->config('contact');
-			$email->viewVars($this->request->data['Contact']);
-			print_r($email);
-			if ($email->send()){
-				$this->Session->setFlash('メール送信しました。');				
-			}else {
-				$this->Session->setFlash('メール失敗');
-			}
-		}
-		echo 'test3 ';
-		$this->render();
-	}
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 }

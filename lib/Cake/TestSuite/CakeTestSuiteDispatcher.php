@@ -136,7 +136,7 @@ class CakeTestSuiteDispatcher {
 		if (class_exists('PHPUnit_Framework_TestCase')) {
 			return true;
 		}
-<<<<<<< HEAD
+
 		$phpunitPath = 'phpunit' . DS . 'phpunit';
 		if (defined('PHP_WINDOWS_VERSION_MAJOR')) {
 			$composerGlobalDir[] = env('APPDATA') . DS . 'Composer' . DS . 'vendor' . DS;
@@ -150,11 +150,6 @@ class CakeTestSuiteDispatcher {
 				ini_set('include_path', $vendor . DS . $phpunitPath . PATH_SEPARATOR . ini_get('include_path'));
 				break;
 			} elseif (is_dir($vendor . DS . 'PHPUnit')) {
-=======
-		foreach (App::path('vendors') as $vendor) {
-			$vendor = rtrim($vendor, DS);
-			if (is_dir($vendor . DS . 'PHPUnit')) {
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 				ini_set('include_path', $vendor . PATH_SEPARATOR . ini_get('include_path'));
 				break;
 			}

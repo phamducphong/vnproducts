@@ -1662,11 +1662,9 @@ class ValidationTest extends CakeTestCase {
 	public function testDecimalLocaleSet() {
 		$this->skipIf(DS === '\\', 'The locale is not supported in Windows and affects other tests.');
 		$restore = setlocale(LC_NUMERIC, 0);
-<<<<<<< HEAD
+
 		$this->skipIf(setlocale(LC_NUMERIC, 'da_DK') === false, "The Danish locale isn't available.");
-=======
-		$this->skipIf(setlocale(LC_NUMERIC, 'de_DE') === false, "The German locale isn't available.");
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
+
 
 		$this->assertTrue(Validation::decimal(1.54), '1.54 should be considered a valid float');
 		$this->assertTrue(Validation::decimal('1.54'), '"1.54" should be considered a valid float');

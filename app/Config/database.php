@@ -10,7 +10,7 @@ class DATABASE_CONFIG {
 		'database' => 'test',
 		'encoding' => 'utf8'
 	);
-	public $mydata = array(
+	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',

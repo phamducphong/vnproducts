@@ -1799,11 +1799,7 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::postLink
  */
 	public function postLink($title, $url = null, $options = array(), $confirmMessage = false) {
-<<<<<<< HEAD
 		$options = (array)$options + array('inline' => true, 'block' => null);
-=======
-		$options += array('inline' => true, 'block' => null);
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		if (!$options['inline'] && empty($options['block'])) {
 			$options['block'] = __FUNCTION__;
 		}

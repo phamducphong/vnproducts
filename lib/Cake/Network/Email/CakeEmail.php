@@ -756,15 +756,10 @@ class CakeEmail {
 		}
 
 		$headers['MIME-Version'] = '1.0';
-<<<<<<< HEAD
 		if (!empty($this->_attachments)) {
 			$headers['Content-Type'] = 'multipart/mixed; boundary="' . $this->_boundary . '"';
 		} elseif ($this->_emailFormat === 'both') {
 			$headers['Content-Type'] = 'multipart/alternative; boundary="' . $this->_boundary . '"';
-=======
-		if (!empty($this->_attachments) || $this->_emailFormat === 'both') {
-			$headers['Content-Type'] = 'multipart/mixed; boundary="' . $this->_boundary . '"';
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		} elseif ($this->_emailFormat === 'text') {
 			$headers['Content-Type'] = 'text/plain; charset=' . $this->_getContentTypeCharset();
 		} elseif ($this->_emailFormat === 'html') {
@@ -1528,10 +1523,7 @@ class CakeEmail {
 		$hasInlineAttachments = count($contentIds) > 0;
 		$hasAttachments = !empty($this->_attachments);
 		$hasMultipleTypes = count($rendered) > 1;
-<<<<<<< HEAD
 		$multiPart = ($hasAttachments || $hasMultipleTypes);
-=======
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 
 		$boundary = $relBoundary = $textBoundary = $this->_boundary;
 
@@ -1542,11 +1534,7 @@ class CakeEmail {
 			$relBoundary = $textBoundary = 'rel-' . $boundary;
 		}
 
-<<<<<<< HEAD
 		if ($hasMultipleTypes && $hasAttachments) {
-=======
-		if ($hasMultipleTypes) {
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 			$msg[] = '--' . $relBoundary;
 			$msg[] = 'Content-Type: multipart/alternative; boundary="alt-' . $boundary . '"';
 			$msg[] = '';
@@ -1554,11 +1542,7 @@ class CakeEmail {
 		}
 
 		if (isset($rendered['text'])) {
-<<<<<<< HEAD
 			if ($multiPart) {
-=======
-			if ($textBoundary !== $boundary || $hasAttachments) {
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 				$msg[] = '--' . $textBoundary;
 				$msg[] = 'Content-Type: text/plain; charset=' . $this->_getContentTypeCharset();
 				$msg[] = 'Content-Transfer-Encoding: ' . $this->_getContentTransferEncoding();
@@ -1571,11 +1555,7 @@ class CakeEmail {
 		}
 
 		if (isset($rendered['html'])) {
-<<<<<<< HEAD
 			if ($multiPart) {
-=======
-			if ($textBoundary !== $boundary || $hasAttachments) {
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 				$msg[] = '--' . $textBoundary;
 				$msg[] = 'Content-Type: text/html; charset=' . $this->_getContentTypeCharset();
 				$msg[] = 'Content-Transfer-Encoding: ' . $this->_getContentTransferEncoding();
@@ -1587,11 +1567,7 @@ class CakeEmail {
 			$msg[] = '';
 		}
 
-<<<<<<< HEAD
 		if ($textBoundary !== $relBoundary) {
-=======
-		if ($hasMultipleTypes) {
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 			$msg[] = '--' . $textBoundary . '--';
 			$msg[] = '';
 		}

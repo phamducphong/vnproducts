@@ -1,9 +1,8 @@
 <div class="users index">
 	<h2><?php echo __('Users'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<table>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-<<<<<<< HEAD
 			<th><?php echo $this->Paginator->sort('firstname'); ?></th>
 			<th><?php echo $this->Paginator->sort('surname'); ?></th>
 			<th><?php echo $this->Paginator->sort('age'); ?></th>
@@ -13,16 +12,11 @@
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
 			<th><?php echo $this->Paginator->sort('phone'); ?></th>
 			<th><?php echo $this->Paginator->sort('joindate'); ?></th>
-=======
-			<th><?php echo $this->Paginator->sort('username'); ?></th>
-			<th><?php echo $this->Paginator->sort('password'); ?></th>
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($users as $user): ?>
 	<tr>
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
-<<<<<<< HEAD
 		<td><?php echo h($user['User']['firstname']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['surname']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['age']); ?>&nbsp;</td>
@@ -32,10 +26,6 @@
 		<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['phone']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['joindate']); ?>&nbsp;</td>
-=======
-		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>

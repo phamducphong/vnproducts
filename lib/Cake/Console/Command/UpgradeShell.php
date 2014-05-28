@@ -839,14 +839,9 @@ class UpgradeShell extends AppShell {
 		);
 
 		$parser->description(
-<<<<<<< HEAD
 			__d('cake_console', "A tool to help automate upgrading an application or plugin " .
 			"from CakePHP 1.3 to 2.0. Be sure to have a backup of your application before " .
 			"running these commands."
-=======
-			__d('cake_console', "A shell to help automate upgrading from CakePHP 1.3 to 2.0. \n" .
-			"Be sure to have a backup of your application before running these commands."
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		))->addSubcommand('all', array(
 			'help' => __d('cake_console', 'Run all upgrade commands.'),
 			'parser' => $subcommandParser

@@ -1636,11 +1636,6 @@ class CakeEmailTest extends CakeTestCase {
 		$this->assertFalse(empty($boundary));
 		$this->assertContains('--' . $boundary, $message);
 		$this->assertContains('--' . $boundary . '--', $message);
-<<<<<<< HEAD
-=======
-		$this->assertContains('--alt-' . $boundary, $message);
-		$this->assertContains('--alt-' . $boundary . '--', $message);
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 
 		$this->CakeEmail->attachments(array('fake.php' => __FILE__));
 		$this->CakeEmail->send();
@@ -2102,11 +2097,7 @@ class CakeEmailTest extends CakeTestCase {
 	}
 
 	protected function _checkContentTransferEncoding($message, $charset) {
-<<<<<<< HEAD
 		$boundary = '--' . $this->CakeEmail->getBoundary();
-=======
-		$boundary = '--alt-' . $this->CakeEmail->getBoundary();
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
 		$result['text'] = false;
 		$result['html'] = false;
 		$length = count($message);
