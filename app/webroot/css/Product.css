@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+#products{
+	padding: 10px;
+	margin: 10px;
+}
+
+#product{
+	display: inline-block;
+	padding: 10px 10px 10px 10px;
+	border: medium solid #A9A9A9;
+	border-radius: 10px;
+}
+#product_catchcopy{
+	line-height:20px;
+	color: #0000FF;
+	font-size: 16pt;
+	padding: 0px;
+}
+#product_detail{
+	text-align: right; 
+}
+
+.searchproduct{
+	padding: 10px;
+	margin: 10px;
+}
+
+.searchtext{
+	display: inline;
+}

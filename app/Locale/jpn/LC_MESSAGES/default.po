@@ -1,0 +1,524 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-05-27 09:19+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/MakersController.php:37;69;94
+msgid "Invalid maker"
+msgstr ""
+
+#: Controller/MakersController.php:52;73
+msgid "The maker has been saved."
+msgstr ""
+
+#: Controller/MakersController.php:55;76
+msgid "The maker could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MakersController.php:98
+msgid "The maker has been deleted."
+msgstr ""
+
+#: Controller/MakersController.php:100
+msgid "The maker could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ProductsController.php:37;69;94;124
+msgid "Invalid product"
+msgstr ""
+
+#: Controller/ProductsController.php:52;73
+msgid "The product has been saved."
+msgstr ""
+
+#: Controller/ProductsController.php:55;76
+msgid "The product could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ProductsController.php:98
+msgid "The product has been deleted."
+msgstr ""
+
+#: Controller/ProductsController.php:100
+msgid "The product could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/SalesController.php:37;69;94
+msgid "Invalid sale"
+msgstr ""
+
+#: Controller/SalesController.php:52;73
+msgid "The sale has been saved."
+msgstr ""
+
+#: Controller/SalesController.php:55;76
+msgid "The sale could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/SalesController.php:98
+msgid "The sale has been deleted."
+msgstr ""
+
+#: Controller/SalesController.php:100
+msgid "The sale could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:37;69;94
+msgid "Invalid user"
+msgstr ""
+
+#: Controller/UsersController.php:52;73
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:55;76
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:98
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:100
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: View/Makers/add.ctp:4
+msgid "Add Maker"
+msgstr ""
+
+#: View/Makers/add.ctp:16
+#: View/Makers/edit.ctp:17
+#: View/Products/add.ctp:14
+#: View/Products/edit.ctp:15
+#: View/Sales/add.ctp:13
+#: View/Sales/edit.ctp:14
+#: View/Users/add.ctp:17
+#: View/Users/edit.ctp:18
+msgid "Submit"
+msgstr "送信"
+
+#: View/Makers/add.ctp:19
+#: View/Makers/edit.ctp:20
+#: View/Makers/index.ctp:14;50
+#: View/Makers/view.ctp:52
+#: View/Products/add.ctp:17
+#: View/Products/edit.ctp:18
+#: View/Products/index.ctp:12;46
+#: View/Products/view.ctp:42
+#: View/Sales/add.ctp:16
+#: View/Sales/edit.ctp:17
+#: View/Sales/index.ctp:11;44
+#: View/Sales/view.ctp:37;64;106
+#: View/Users/add.ctp:20
+#: View/Users/edit.ctp:21
+#: View/Users/index.ctp:15;52
+#: View/Users/view.ctp:57
+msgid "Actions"
+msgstr "アクション"
+
+#: View/Makers/add.ctp:22
+#: View/Makers/edit.ctp:24
+#: View/Makers/view.ctp:56
+msgid "List Makers"
+msgstr ""
+
+#: View/Makers/add.ctp:23
+#: View/Makers/edit.ctp:25
+#: View/Makers/index.ctp:53
+#: View/Makers/view.ctp:58
+#: View/Products/add.ctp:20
+#: View/Products/edit.ctp:22
+#: View/Products/view.ctp:46
+#: View/Sales/add.ctp:22
+#: View/Sales/edit.ctp:24
+#: View/Sales/index.ctp:49
+#: View/Sales/view.ctp:45
+msgid "List Products"
+msgstr ""
+
+#: View/Makers/add.ctp:24
+#: View/Makers/edit.ctp:26
+#: View/Makers/index.ctp:54
+#: View/Makers/view.ctp:59
+#: View/Products/index.ctp:48
+#: View/Products/view.ctp:47
+#: View/Sales/add.ctp:23
+#: View/Sales/edit.ctp:25
+#: View/Sales/index.ctp:50
+#: View/Sales/view.ctp:46;129
+msgid "New Product"
+msgstr ""
+
+#: View/Makers/edit.ctp:4
+#: View/Makers/view.ctp:54
+msgid "Edit Maker"
+msgstr ""
+
+#: View/Makers/edit.ctp:23
+#: View/Makers/index.ctp:30
+#: View/Products/edit.ctp:21
+#: View/Products/index.ctp:26
+#: View/Sales/edit.ctp:20
+#: View/Sales/index.ctp:24
+#: View/Sales/view.ctp:81;120
+#: View/Users/edit.ctp:24
+#: View/Users/index.ctp:32
+msgid "Delete"
+msgstr ""
+
+#: View/Makers/edit.ctp:23
+#: View/Makers/index.ctp:30
+#: View/Makers/view.ctp:55
+#: View/Products/edit.ctp:21
+#: View/Products/index.ctp:26
+#: View/Products/view.ctp:45
+#: View/Sales/edit.ctp:20
+#: View/Sales/index.ctp:24
+#: View/Sales/view.ctp:40;81;120
+#: View/Users/edit.ctp:24
+#: View/Users/index.ctp:32
+#: View/Users/view.ctp:60
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Makers/index.ctp:2
+msgid "Makers"
+msgstr ""
+
+#: View/Makers/index.ctp:28
+#: View/Products/index.ctp:24
+#: View/Sales/index.ctp:22
+#: View/Sales/view.ctp:79;118
+#: View/Users/index.ctp:30
+msgid "View"
+msgstr ""
+
+#: View/Makers/index.ctp:29
+#: View/Products/index.ctp:25
+#: View/Sales/index.ctp:23
+#: View/Sales/view.ctp:80;119
+#: View/Users/index.ctp:31
+msgid "Edit"
+msgstr ""
+
+#: View/Makers/index.ctp:38
+#: View/Products/index.ctp:34
+#: View/Products/show.ctp:23
+#: View/Sales/index.ctp:32
+#: View/Users/index.ctp:40
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr "ページ： {:page}／{:pages}, 表示中： {:current}／{:count}, スタート：{:start}, エンド：{:end}"
+
+#: View/Makers/index.ctp:43
+#: View/Products/index.ctp:39
+#: View/Products/show.ctp:28
+#: View/Sales/index.ctp:37
+#: View/Users/index.ctp:45
+msgid "previous"
+msgstr "前へ"
+
+#: View/Makers/index.ctp:45
+#: View/Products/index.ctp:41
+#: View/Products/show.ctp:30
+#: View/Sales/index.ctp:39
+#: View/Users/index.ctp:47
+msgid "next"
+msgstr "次へ"
+
+#: View/Makers/index.ctp:52
+#: View/Makers/view.ctp:57
+msgid "New Maker"
+msgstr ""
+
+#: View/Makers/view.ctp:2
+msgid "Maker"
+msgstr ""
+
+#: View/Makers/view.ctp:4;66
+#: View/Products/detail.ctp:4
+#: View/Products/view.ctp:4
+#: View/Sales/view.ctp:4;54;99
+#: View/Users/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: View/Makers/view.ctp:9;70
+#: View/Products/detail.ctp:19
+#: View/Products/view.ctp:9
+#: View/Sales/view.ctp:100
+msgid "Name"
+msgstr "名前"
+
+#: View/Makers/view.ctp:14
+#: View/Sales/view.ctp:59
+#: View/Users/view.ctp:29
+msgid "Address1"
+msgstr "住所１"
+
+#: View/Makers/view.ctp:19
+#: View/Sales/view.ctp:60
+#: View/Users/view.ctp:34
+msgid "Address2"
+msgstr "住所２"
+
+#: View/Makers/view.ctp:24
+msgid "Url"
+msgstr ""
+
+#: View/Makers/view.ctp:29
+#: View/Sales/view.ctp:61
+#: View/Users/view.ctp:39
+msgid "Email"
+msgstr ""
+
+#: View/Makers/view.ctp:34
+#: View/Sales/view.ctp:62
+#: View/Users/view.ctp:44
+msgid "Phone"
+msgstr ""
+
+#: View/Makers/view.ctp:39
+msgid "Fax"
+msgstr ""
+
+#: View/Makers/view.ctp:44
+#: View/Sales/view.ctp:63
+#: View/Users/view.ctp:49
+msgid "Joindate"
+msgstr "登録日付"
+
+#: View/Makers/view.ctp:55
+msgid "Delete Maker"
+msgstr ""
+
+#: View/Makers/view.ctp:63
+#: View/Sales/view.ctp:95
+msgid "Related Products"
+msgstr ""
+
+#: View/Makers/view.ctp:74
+#: View/Products/detail.ctp:9
+#: View/Products/view.ctp:14
+#: View/Sales/view.ctp:101
+msgid "Catchcopy"
+msgstr "キャッチコピー"
+
+#: View/Makers/view.ctp:78
+#: View/Products/detail.ctp:24
+#: View/Products/view.ctp:19
+#: View/Sales/view.ctp:102
+msgid "Price"
+msgstr "単価"
+
+#: View/Makers/view.ctp:82
+#: View/Products/detail.ctp:29
+#: View/Products/view.ctp:24
+#: View/Sales/view.ctp:103
+msgid "Quantity"
+msgstr "数量"
+
+#: View/Makers/view.ctp:86
+#: View/Products/detail.ctp:34
+#: View/Products/view.ctp:29
+#: View/Sales/view.ctp:104
+msgid "Makerid"
+msgstr "メーカーID"
+
+#: View/Makers/view.ctp:90
+#: View/Products/detail.ctp:39
+#: View/Products/view.ctp:34
+#: View/Sales/view.ctp:105
+msgid "Createdate"
+msgstr "登録日時"
+
+#: View/Makers/view.ctp:98
+#: View/Products/edit.ctp:4
+#: View/Products/view.ctp:44
+msgid "Edit Product"
+msgstr ""
+
+#: View/Products/add.ctp:4
+msgid "Add Product"
+msgstr ""
+
+#: View/Products/detail.ctp:2
+#: View/Products/show.ctp:3
+#: View/Products/view.ctp:2
+msgid "Maker\'s Product"
+msgstr "メーカー別の商品"
+
+#: View/Products/detail.ctp:2
+#: View/Products/show.ctp:3
+#: View/Products/view.ctp:2
+msgid "Product"
+msgstr "商品"
+
+#: View/Products/detail.ctp:14
+msgid "Picture"
+msgstr "画像"
+
+#: View/Products/index.ctp:2
+msgid "Products"
+msgstr "商品一覧"
+
+#: View/Products/view.ctp:45
+msgid "Delete Product"
+msgstr "商品削除"
+
+#: View/Sales/add.ctp:4
+msgid "Add Sale"
+msgstr ""
+
+#: View/Sales/add.ctp:19
+#: View/Sales/edit.ctp:21
+#: View/Sales/view.ctp:41
+msgid "List Sales"
+msgstr ""
+
+#: View/Sales/add.ctp:20
+#: View/Sales/edit.ctp:22
+#: View/Sales/index.ctp:47
+#: View/Sales/view.ctp:43
+#: View/Users/add.ctp:23
+#: View/Users/edit.ctp:25
+#: View/Users/view.ctp:61
+msgid "List Users"
+msgstr ""
+
+#: View/Sales/add.ctp:21
+#: View/Sales/edit.ctp:23
+#: View/Sales/index.ctp:48
+#: View/Sales/view.ctp:44;90
+#: View/Users/index.ctp:54
+#: View/Users/view.ctp:62
+msgid "New User"
+msgstr ""
+
+#: View/Sales/edit.ctp:4
+#: View/Sales/view.ctp:39
+msgid "Edit Sale"
+msgstr ""
+
+#: View/Sales/index.ctp:2
+msgid "Sales"
+msgstr ""
+
+#: View/Sales/index.ctp:46
+#: View/Sales/view.ctp:42
+msgid "New Sale"
+msgstr ""
+
+#: View/Sales/view.ctp:2
+msgid "Sale"
+msgstr ""
+
+#: View/Sales/view.ctp:9
+msgid "Productid"
+msgstr ""
+
+#: View/Sales/view.ctp:14
+msgid "Userid"
+msgstr ""
+
+#: View/Sales/view.ctp:19
+msgid "Amount"
+msgstr ""
+
+#: View/Sales/view.ctp:24
+msgid "Sumprice"
+msgstr ""
+
+#: View/Sales/view.ctp:29
+msgid "Saledate"
+msgstr ""
+
+#: View/Sales/view.ctp:40
+msgid "Delete Sale"
+msgstr ""
+
+#: View/Sales/view.ctp:50
+msgid "Related Users"
+msgstr ""
+
+#: View/Sales/view.ctp:55
+#: View/Users/view.ctp:9
+msgid "Firstname"
+msgstr ""
+
+#: View/Sales/view.ctp:56
+#: View/Users/view.ctp:14
+msgid "Surname"
+msgstr ""
+
+#: View/Sales/view.ctp:57
+#: View/Users/view.ctp:19
+msgid "Age"
+msgstr ""
+
+#: View/Sales/view.ctp:58
+#: View/Users/view.ctp:24
+msgid "Sex"
+msgstr ""
+
+#: View/Users/add.ctp:4
+msgid "Add User"
+msgstr ""
+
+#: View/Users/edit.ctp:4
+#: View/Users/view.ctp:59
+msgid "Edit User"
+msgstr ""
+
+#: View/Users/index.ctp:2
+msgid "Users"
+msgstr ""
+
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr ""
+
+#: View/Users/view.ctp:60
+msgid "Delete User"
+msgstr ""
+
+#: Model/Maker.php:validation for field name;validation for field address1;validation for field address2;validation for field phone;validation for field fax
+#: Model/Product.php:validation for field name;validation for field price;validation for field quantity;validation for field makerid
+#: Model/Sale.php:validation for field productid;validation for field userid
+#: Model/User.php:validation for field firstname;validation for field surname;validation for field address1;validation for field address2;validation for field email;validation for field phone
+msgid "notEmpty"
+msgstr ""
+
+#: Model/Maker.php:validation for field email
+#: Model/User.php:validation for field email
+msgid "email"
+msgstr ""
+
+#: Model/Maker.php:validation for field joindate
+#: Model/Product.php:validation for field createdate
+#: Model/Sale.php:validation for field saledate
+#: Model/User.php:validation for field joindate
+msgid "datetime"
+msgstr ""
+
+#: Model/Product.php:validation for field price;validation for field quantity;validation for field makerid
+#: Model/Sale.php:validation for field productid;validation for field userid;validation for field amount;validation for field sumprice
+#: Model/User.php:validation for field age
+msgid "numeric"
+msgstr ""
+
+#: Model/User.php:validation for field sex
+msgid "boolean"
+msgstr ""
+
