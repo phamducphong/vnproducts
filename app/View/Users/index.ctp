@@ -12,6 +12,8 @@
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
 			<th><?php echo $this->Paginator->sort('phone'); ?></th>
 			<th><?php echo $this->Paginator->sort('joindate'); ?></th>
+			<th><?php echo $this->Paginator->sort('loginname'); ?></th>
+			<th><?php echo $this->Paginator->sort('loginpass'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($users as $user): ?>

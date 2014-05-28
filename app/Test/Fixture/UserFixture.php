@@ -6,7 +6,6 @@
 class UserFixture extends CakeTestFixture {
 
 /**
-<<<<<<< HEAD
  * Table name
  *
  * @var string
@@ -14,8 +13,6 @@ class UserFixture extends CakeTestFixture {
 	public $table = 'user';
 
 /**
-=======
->>>>>>> 7e96a141e369c30a97ea5da918adfc3e6c751f65
  * Fields
  *
  * @var array
@@ -31,11 +28,12 @@ class UserFixture extends CakeTestFixture {
 		'email' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'phone' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'joindate' => array('type' => 'datetime', 'null' => false, 'default' => null),
+		'loginname' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'loginpass' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
-
 	);
 
 /**
@@ -54,7 +52,9 @@ class UserFixture extends CakeTestFixture {
 			'address2' => 'Lorem ipsum dolor sit amet',
 			'email' => 'Lorem ipsum dolor sit amet',
 			'phone' => 'Lorem ipsum dolor sit amet',
-			'joindate' => '2014-05-27 04:43:47'
+			'joindate' => '2014-05-28 12:38:31',
+			'loginname' => 'Lorem ipsum dolor sit amet',
+			'loginpass' => 'Lorem ipsum dolor sit amet'
 		),
 	);
 

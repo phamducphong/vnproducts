@@ -103,34 +103,6 @@ class ProductsController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 
-/**
- * show method
- *
- * @return void
- */
-	public function show() {
-		$this->Product->recursive = 0;
-		
-		//商品一覧
-		if ($this->request->is('post')){
-			$keyword = $this->request->data['Product']['keyword'];
-			$products = $this->Product->findProductsMakerByKeyword($keyword,10);
-			$this->set('products',$products);
-		}else {
-			//$this->set('products', $this->Paginator->paginate());
-			$products = $this->Product->findProductsMakerByKeyword(null,10);
-			$this->set('products',$products);
-		}
-		
-		//メーカー別の商品一覧
-		$Maker1Records = $this->Product->findProductsByMakerID(1,5);
-		$this->set('Maker1Records', $Maker1Records);
-		
-		$Maker2Records = $this->Product->findProductsByMakerID(2,5);
-		$this->set('Maker2Records', $Maker2Records);
-		
-		
-	}
 
 /**
  * detail method
@@ -147,4 +119,44 @@ class ProductsController extends AppController {
 		$this->set('product', $this->Product->find('first', $options));
 	}
 	
+/**
+ * show method
+ *
+ * @return void
+ */
+	public function show() {
+		$this->Product->recursive = 0;
+		
+		//商品一覧
+		if ($this->request->is('post')){
+			$keyword = $this->request->data['Product']['keyword'];
+			$products = $this->Product->findProductsMakerByKeyword($keyword,10);
+		}else {
+			$products = $this->Product->findProductsMakerByKeyword(null,10);
+		}
+		$this->set('products',$products);
+		
+		//メーカー別の商品一覧
+		$Maker1Records = $this->Product->findProductsByMakerid(1,5);
+		$this->set('Maker1Records', $Maker1Records);
+		
+		$Maker2Records = $this->Product->findProductsByMakerid(2,5);
+		$this->set('Maker2Records', $Maker2Records);
+	}
+
+
+	
+	public function showbymaker($makerid=null){
+		$this->Product->recursive = 0;
+		
+		if ($this->request->is('post')){
+			$makerid = $this->request->data['Product']['makerid'];
+			$keyword = $this->request->data['Product']['keyword'];
+			$products = $this->Product->findProductsByMakeridAndKeyword($makerid,$keyword);
+		}else {
+			$products = $this->Product->findProductsByMakerid($makerid);
+		}
+		$this->set('makerid', $makerid);
+		$this->set('products', $products);
+	}
 }

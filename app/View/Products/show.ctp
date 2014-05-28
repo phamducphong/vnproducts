@@ -40,7 +40,7 @@
 
 <!-- メーカー別　商品一覧 -->
 <h2><?php echo __('Maker\'s Product'); ?></h2>
-<h3><?php echo $this->Html->link('Hitachi','/makers/show/1') ;?></h3>
+<h3><?php echo $this->Html->link('Hitachi','/products/showbymaker/1') ;?></h3>
 <div id='products'>
 	<?php foreach ($Maker1Records as $product): ?>
 	<div id='product'>
@@ -58,7 +58,7 @@
 	<?php endforeach; ?>
 </div>
 
-<h3><?php echo $this->Html->link('Toshiba','/makers/show/2') ;?></h3>
+<h3><?php echo $this->Html->link('Toshiba','/products/showbymaker/2') ;?></h3>
 <div id='products'>
 	<?php foreach ($Maker2Records as $product): ?>
 	<div id='product'>
