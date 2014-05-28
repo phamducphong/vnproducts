@@ -15,7 +15,6 @@ class ProductsController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
-	public $uses = array('Product','User','Maker');
 
 /**
  * index method
@@ -115,21 +114,21 @@ class ProductsController extends AppController {
 		//商品一覧
 		if ($this->request->is('post')){
 			$keyword = $this->request->data['Product']['keyword'];
-			$cond = array("OR"=>array(
-					'Product.name like'=>"%$keyword%",
-					'Product.catchcopy like'=>"%$keyword%")
-					);
-			$this->set('products', $this->Paginator->paginate('Product',$cond));
+			$products = $this->Product->findProductsMakerByKeyword($keyword,10);
+			$this->set('products',$products);
 		}else {
-			$this->set('products', $this->Paginator->paginate());
+			//$this->set('products', $this->Paginator->paginate());
+			$products = $this->Product->findProductsMakerByKeyword(null,10);
+			$this->set('products',$products);
 		}
 		
 		//メーカー別の商品一覧
-		$Maker1Records = $this->Product->find('all',array('conditions'=>array('makerid'=>1),'limit'=>4));
+		$Maker1Records = $this->Product->findProductsByMakerID(1,5);
 		$this->set('Maker1Records', $Maker1Records);
 		
-		$Maker2Records = $this->Product->find('all',array('conditions'=>array('makerid'=>2),'limit'=>4));
+		$Maker2Records = $this->Product->findProductsByMakerID(2,5);
 		$this->set('Maker2Records', $Maker2Records);
+		
 		
 	}
 

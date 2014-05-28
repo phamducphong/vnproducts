@@ -101,4 +101,18 @@ class MakersController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+	
+/**
+ * show method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function show($id = null) {
+		if (!$this->Maker->exists($id)) {
+			throw new NotFoundException(__('Invalid maker'));
+		}
+		$this->set('maker', $this->Maker->findMakerByID($id));
+	}
 }

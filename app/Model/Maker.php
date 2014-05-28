@@ -122,4 +122,15 @@ class Maker extends AppModel {
 			'order' => ''
 		)
 	);
+	
+	
+	public function findMakerByID($id=NULL){
+		if ($id == NULL){
+			$ret = $this->find('all');
+		}else {
+			$cond = array('conditions'=>array('Maker.id'=>$id));
+			$ret = $this->find('first',$cond);
+		}
+		return $ret;
+	}
 }

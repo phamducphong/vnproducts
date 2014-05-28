@@ -108,4 +108,80 @@ class Product extends AppModel {
 			),
 		),
 	);
+
+	
+/**
+ * 
+ * @param string $limit
+ * @return Ambigous <multitype:, NULL>
+ */
+	public function findProductsNew($limit=null){
+		$cond = array(
+				'order' => 'Product.createdate DESC',
+				'limit' => $limit
+				);
+		$ret = $this->find('all',$cond);
+		return $ret;
+	}
+	
+/**
+ * 
+ * @param string $makerid
+ * @param string $limit
+ * @return Ambigous <multitype:, NULL>
+ */
+	public function findProductsByMakerID($makerid=null,$limit=null){
+		$cond = array(
+				'conditions' => array('Product.makerid' => $makerid),
+				'order' => 'Product.createdate DESC',
+				'limit' => $limit
+				);
+		$ret = $this->find('all',$cond);
+		return $ret;
+	}
+	
+/**
+ * 
+ * @param string $keyword
+ * @param string $limit
+ * @return Ambigous <multitype:, NULL>
+ */
+	public function findProductsByKeyword($keyword=null,$limit=null){
+		$cond = array(
+				'conditions' => array("OR"=>array(
+											'Product.name like'=>"%$keyword%",
+											'Product.catchcopy like'=>"%$keyword%"
+											)),
+				'order' => 'Product.createdate DESC',
+				'limit' => $limit
+		);
+		$ret = $this->find('all',$cond);
+		return $ret;
+	}
+	
+	public function findProductsMakerByKeyword($keyword=null,$limit=null){
+		$fields = array('product.*','maker.*');
+		$joins[] = array(
+				'type'=>'INNER',
+				'table'=>'maker',
+				'alias'=>'Maker',
+				'conditions'=>array('product.makerid = maker.id',)
+		);
+		$cond = array("OR"=>array(
+						'Product.name like'=>"%$keyword%",
+						'Product.catchcopy like'=>"%$keyword%"
+				)
+		);
+		$order = 'Product.createdate DESC';
+			
+		
+		$ret = $this->find('all',array(
+				'fields'=>$fields,
+				'joins'=>$joins,
+				'conditions'=>$cond,
+				'order'=>$order,
+				'limit'=>$limit
+		));
+		return $ret;
+	}
 }
