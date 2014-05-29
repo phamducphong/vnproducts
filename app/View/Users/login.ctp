@@ -3,7 +3,7 @@
 		echo $this->Session->flash('auth');
 	}
 	echo $this->Form->create('User',array('action'=>'login'));
-	echo $this->Form->input('username');
-	echo $this->Form->input('password');
-	echo $this->Form->end('Login');
+	echo $this->Form->input('loginname');
+	echo $this->Form->password('loginpass');
+	echo $this->Form->end('ログイン');
 ?>

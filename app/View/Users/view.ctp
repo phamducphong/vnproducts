@@ -51,6 +51,16 @@
 			<?php echo h($user['User']['joindate']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Loginname'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['loginname']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Loginpass'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['loginpass']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">

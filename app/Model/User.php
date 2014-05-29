@@ -145,4 +145,14 @@ class User extends AppModel {
 			),
 		),
 	);
+	
+	
+/**
+ * (non-PHPdoc)
+ * @see Model::beforeSave()
+ */
+	public function beforeSave($options=array()){
+		$this->data['User']['loginpass'] = AuthComponent::password($this->data['User']['loginpass']);
+		return true;
+	}
 }

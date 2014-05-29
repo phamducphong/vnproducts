@@ -15,8 +15,17 @@ class UsersController extends AppController {
  * @var array
  */
 
-	public $components = array('Paginator');
+	public $components = array('Paginator','Session','Auth');
 
+/**
+ * (non-PHPdoc)
+ * @see Controller::beforeFilter()
+ */
+	public function beforeFilter(){
+		$this->Auth->allow('add');
+		$this->Auth->allow('logout');
+	}
+	
 /**
  * index method
  *
@@ -104,4 +113,18 @@ class UsersController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 
+	
+	public function login(){
+		if($this->request->isPost()){
+			if($this->Auth->login($this->request->data)){
+				$this->redirect($this->Auth->redirect());
+			}else {
+				$this->Session->setFlash('ユーザ名かパスワードが違います。','default',array(),'auth');
+			}
+		}
+	}
+	
+	public function logout(){
+		$this->Auth->logout();
+	}
 }

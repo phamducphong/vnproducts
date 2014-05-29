@@ -13,6 +13,8 @@
 		echo $this->Form->input('email');
 		echo $this->Form->input('phone');
 		echo $this->Form->input('joindate');
+		echo $this->Form->input('loginname');
+		echo $this->Form->input('loginpass');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
