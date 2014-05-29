@@ -14,8 +14,12 @@ class ProductsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
-
+	public $components = array('Paginator','Session','Auth');
+	
+	public function beforeFilter(){
+		$this->Auth->allow('*');
+	}
+	
 /**
  * index method
  *
@@ -115,6 +119,7 @@ class ProductsController extends AppController {
 		if (!$this->Product->exists($id)) {
 			throw new NotFoundException(__('Invalid product'));
 		}
+
 		$options = array('conditions' => array('Product.' . $this->Product->primaryKey => $id));
 		$this->set('product', $this->Product->find('first', $options));
 	}

@@ -16,7 +16,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'Home');
+$cakeDescription = __d('cake_dev', 'vnproducts');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -41,6 +41,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, '/products/show'); ?></h1>
+			<div id="menu">
+				<?php echo $this->Html->link('ホーム', '/products/show'); ?> |
+				<?php echo '注文履歴'; ?> |
+				<?php echo $this->Html->link('ログアウト', '/users/logout'); ?>
+			</div>
 		</div>
 		<div id="content">
 

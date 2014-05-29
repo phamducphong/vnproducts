@@ -7,13 +7,17 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class SalesController extends AppController {
-
+	
+	public $name = 'Sales';
+	public $uses = array('Sale','User','Product');
+	public $helpers = array('js' => array('jquery'));
+	
 /**
  * Components
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator','Session','Auth');
 
 /**
  * index method
@@ -100,5 +104,38 @@ class SalesController extends AppController {
 			$this->Session->setFlash(__('The sale could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+	
+/**
+ * 
+ * @param string $productid
+ */
+	public function createSale($productid=null){
+		
+		if ($this->request->is('post')) {
+			$this->Sale->create();
+			if ($this->Sale->save($this->request->data)) {
+				$this->Session->setFlash(__('The sale has been saved.'));
+				return $this->redirect(array('action' => '.'));
+			} else {
+				$this->Session->setFlash(__('The sale could not be saved. Please, try again.'));
+			}
+			
+		}else {
+			
+			$userid = $this->Session->read('userid');
+			$amount = 1;
+			$product = $this->Product->find('first',array('id'=>$productid));
+			$sumprice = $amount * $product['Product']['price'];
+			
+			
+			$this->request->data['Sale']['productid'] = $productid;
+			$this->request->data['Sale']['userid'] = $userid;
+			$this->request->data['Sale']['name'] = $product['Product']['name'];
+			$this->request->data['Sale']['price'] = $product['Product']['price'];
+			$this->request->data['Sale']['amount'] = $amount;
+			$this->request->data['Sale']['sumprice'] = $sumprice;
+			$this->request->data['Sale']['saledate'] = date('Y-m-d H:i:s');
+		}
 	}
 }

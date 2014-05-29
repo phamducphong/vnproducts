@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+#SaleBox{
+	border: medium solid #C0C0C0;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 0px;
+	text-align:center;
+	background-color: #EEEEEE;
+}

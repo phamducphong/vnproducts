@@ -117,6 +117,8 @@ class UsersController extends AppController {
 	public function login(){
 		if($this->request->isPost()){
 			if($this->Auth->login($this->request->data)){
+				$ret=$this->User->field('id',array('loginname'=>$this->request->data['User']['loginname']));
+				$this->Session->write('userid',$ret);
 				$this->redirect($this->Auth->redirect());
 			}else {
 				$this->Session->setFlash('ユーザ名かパスワードが違います。','default',array(),'auth');
