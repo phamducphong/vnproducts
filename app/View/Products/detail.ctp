@@ -18,7 +18,7 @@
 	</dd>
 	<dt><?php echo __('Price'); ?></dt>
 	<dd>
-		<?php echo h($product['Product']['price']); ?>
+		<?php echo h($this->Number->currency($product['Product']['price'],'￥')); ?>
 		&nbsp;
 	</dd>
 	<dt><?php echo __('Quantity'); ?></dt>
@@ -39,8 +39,8 @@
 </dl>
 <br>
 <div>
-	<?php 
-		$url = '/sales/createSale/' . $product['Product']['id'];
+	<?php
+		$url = array('controller'=>'sales','action'=>'createSale');
 		echo $this->Html->image('button12_cart_01.jpg', array('alt'=>'カートに入り','url'=>$url));
 	?>
 </div>

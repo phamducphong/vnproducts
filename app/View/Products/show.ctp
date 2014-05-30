@@ -57,7 +57,7 @@
 		<div id='product_catchcopy'><?php echo $product['Product']['catchcopy'];?></div>
 		<div id='product_picture'><img src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=180px height=180px ></div>
 		<div id='product_name'><?php echo $product['Product']['name'];?></div>
-		<div id='product_price'>￥<?php echo $product['Product']['price'];?></div>
+		<div id='product_price'><?php echo $this->Number->currency($product['Product']['price'],'￥');?></div>
 		<div id='product_maker'>
 			<?php 
 				$linkmaker = '/makers/show/' . $product['Maker']['id'];
@@ -85,7 +85,7 @@
 		<div id='product_catchcopy'><?php echo $product['Product']['catchcopy'];?></div>
 		<div id='product_picture'><img src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=180px height=180px ></div>
 		<div id='product_name'><?php echo $product['Product']['name'];?></div>
-		<div id='product_price'>￥<?php echo $product['Product']['price'];?></div>
+		<div id='product_price'><?php echo $this->Number->currency($product['Product']['price'],'￥');?></div>
 		<div id='product_detail'>
 			<?php 
 				$link = 'detail/' . $product['Product']['id'];
@@ -103,7 +103,7 @@
 		<div id='product_catchcopy'><?php echo $product['Product']['catchcopy'];?></div>
 		<div id='product_picture'><img src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=180px height=180px ></div>
 		<div id='product_name'><?php echo $product['Product']['name'];?></div>
-		<div id='product_price'>￥<?php echo $product['Product']['price'];?></div>
+		<div id='product_price'><?php echo $this->Number->currency($product['Product']['price'],'￥');?></div>
 		<div id='product_detail'>
 			<?php 
 				$link = 'detail/' . $product['Product']['id'];
