@@ -123,6 +123,10 @@ class ProductsController extends AppController {
 
 		$options = array('conditions' => array('Product.' . $this->Product->primaryKey => $id));
 		$this->set('product', $this->Product->find('first', $options));
+		
+		//この商品を買った人は以下の商品も買った
+		$recommends = $this->Product->findRecommendProductsByProductid($id,4);
+		$this->set('recommends',$recommends);
 	}
 	
 /**

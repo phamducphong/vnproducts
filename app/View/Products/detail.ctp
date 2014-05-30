@@ -9,6 +9,9 @@ $(document).ready(function(){
 });
 </script>
 
+<?php echo $this->Html->css('Product'); ?>
+
+
 <h2><?php echo __('Product'); ?></h2>
 <dl>
 	<dt><?php echo __('Catchcopy'); ?></dt>
@@ -54,4 +57,29 @@ $(document).ready(function(){
 		$url = array('controller'=>'sales','action'=>'createSale',$product['Product']['id']);
 		echo $this->Html->image('button12_cart_01.jpg', array('alt'=>'カートに入り','url'=>$url));
 	?>
+</div>
+<br>
+<h2>この商品を買った人は以下の商品も買いました</h2>
+<div id='products'>
+	<?php foreach ($recommends as $recommend): ?>
+	<div id='product'>
+		<div id='product_catchcopy'><?php echo $recommend['Product']['catchcopy'];?></div>
+		<div id='product_picture'>
+			<?php 
+				$picture = $recommend['Product']['picture'];
+				$url = array('controller'=>'products','action'=>'detail',$recommend['Product']['id']);
+				$option = array('alt'=>'no image','url'=>$url,'width'=>'180px','height'=>'180px');
+				echo $this->Html->image($picture,$option);
+			?>
+		</div>
+		<div id='product_name'><?php echo $recommend['Product']['name'];?></div>
+		<div id='product_price'><?php echo $this->Number->currency($recommend['Product']['price'],'￥');?></div>
+		<div id='product_detail'>
+			<?php 
+				$url = array('controller'=>'products','action'=>'detail',$recommend['Product']['id']);
+				echo $this->Html->link('もっと見る', $url );
+			?>
+		</div>
+	</div>
+	<?php endforeach; ?>
 </div>

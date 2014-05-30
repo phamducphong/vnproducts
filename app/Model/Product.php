@@ -124,12 +124,7 @@ class Product extends AppModel {
 		return $ret;
 	}
 	
-/**
- * 
- * @param string $makerid
- * @param string $limit
- * @return Ambigous <multitype:, NULL>
- */
+
 	public function findProductsByMakerid($makerid=null,$limit=null){
 		$fields = array('product.*','maker.*');
 		$joins[] = array(
@@ -179,12 +174,6 @@ class Product extends AppModel {
 		return $ret;
 	}
 	
-/**
- * 
- * @param string $keyword
- * @param string $limit
- * @return Ambigous <multitype:, NULL>
- */
 	public function findProductsByKeyword($keyword=null,$limit=null){
 		$cond = array(
 				'conditions' => array("OR"=>array(
@@ -198,12 +187,6 @@ class Product extends AppModel {
 		return $ret;
 	}
 	
-/**
- * 
- * @param string $keyword
- * @param string $limit
- * @return Ambigous <multitype:, NULL>
- */
 	public function findProductsMakerByKeyword($keyword=null,$limit=null){
 		$fields = array('product.*','maker.*');
 		$joins[] = array(
@@ -227,6 +210,19 @@ class Product extends AppModel {
 				'order'=>$order,
 				'limit'=>$limit
 		));
+		return $ret;
+	}
+
+	public function findRecommendProductsByProductid($productid=null,$limit=null){
+		$sql = "SELECT Product.* FROM vnproducts.product as Product WHERE Product.id IN
+					(
+						SELECT DISTINCT Sale.productid FROM vnproducts.sale as Sale WHERE Sale.userid IN
+						(SELECT Sale.userid FROM vnproducts.sale as Sale WHERE Sale.productid = {$productid})
+    				) AND Product.id != {$productid}
+    				ORDER BY Product.createdate DESC
+    				LIMIT {$limit}
+		";
+		$ret = $this->query($sql);
 		return $ret;
 	}
 }
