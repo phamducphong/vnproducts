@@ -1,3 +1,13 @@
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#image").mouseover(function(){
+		$("#pop-up").show();
+	});
+	$("#image").mouseout(function(){
+		$("#pop-up").hide();
+	});
+});
+</script>
 
 <h2><?php echo __('Product'); ?></h2>
 <dl>
@@ -8,7 +18,9 @@
 	</dd>
 	<dt><?php echo __('Picture'); ?></dt>
 	<dd>
-		<img src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=300px height=300px >
+		
+		<img id="image" src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=200px height=200px >
+		<span id="pop-up" style="position:fixed; display:none; right:10px;bottom:10px;"><img src="<?php echo $product['Product']['picture']; ?>"/></span>
 		&nbsp;
 	</dd>
 	<dt><?php echo __('Name'); ?></dt>
