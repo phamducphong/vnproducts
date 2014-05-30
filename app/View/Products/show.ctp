@@ -14,7 +14,7 @@
 </div>
 
 <!-- タッチスライド（スワイプ）で複数画像を左右にスライド -->
-<div class="clSlider">
+<div class="clSlider" style="width:850px;">
 
     <div class="touchslider-viewport" style="width:650px;overflow:hidden;position:relative;height:450px;"><div>
     	<?php foreach ($products as $product): ?>
@@ -32,9 +32,9 @@
     <div align="center">
         <span class="touchslider-prev">←</span>
         <span class="touchslider-nav-item touchslider-nav-item-current">●</span>
+        <?php for($i=1;$i<count($products);$i++){ ?>
         <span class="touchslider-nav-item">●</span>
-        <span class="touchslider-nav-item">●</span>
-        <span class="touchslider-nav-item">●</span>
+        <?php }?>
         <span class="touchslider-next">→</span>
     </div>
     

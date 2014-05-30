@@ -1,10 +1,11 @@
 <div class="products index">
 	<h2><?php echo __('Products'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<table>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('catchcopy'); ?></th>
+			<th><?php echo $this->Paginator->sort('picture'); ?></th>
 			<th><?php echo $this->Paginator->sort('price'); ?></th>
 			<th><?php echo $this->Paginator->sort('quantity'); ?></th>
 			<th><?php echo $this->Paginator->sort('makerid'); ?></th>
@@ -16,6 +17,7 @@
 		<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['name']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['catchcopy']); ?>&nbsp;</td>
+		<td><?php echo h($product['Product']['picture']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['price']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['quantity']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['makerid']); ?>&nbsp;</td>

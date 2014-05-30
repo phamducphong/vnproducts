@@ -133,20 +133,22 @@ class ProductsController extends AppController {
 	public function show() {
 		$this->Product->recursive = 0;
 		
+		$limit = 4;
+		
 		//商品一覧
 		if ($this->request->is('post')){
 			$keyword = $this->request->data['Product']['keyword'];
-			$products = $this->Product->findProductsMakerByKeyword($keyword,10);
+			$products = $this->Product->findProductsMakerByKeyword($keyword,$limit*2);
 		}else {
-			$products = $this->Product->findProductsMakerByKeyword(null,10);
+			$products = $this->Product->findProductsMakerByKeyword(null,$limit*2);
 		}
 		$this->set('products',$products);
 		
 		//メーカー別の商品一覧
-		$Maker1Records = $this->Product->findProductsByMakerid(1,5);
+		$Maker1Records = $this->Product->findProductsByMakerid(1,$limit);
 		$this->set('Maker1Records', $Maker1Records);
 		
-		$Maker2Records = $this->Product->findProductsByMakerid(2,5);
+		$Maker2Records = $this->Product->findProductsByMakerid(2,$limit);
 		$this->set('Maker2Records', $Maker2Records);
 	}
 

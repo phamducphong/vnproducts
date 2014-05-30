@@ -11,7 +11,6 @@
 		<th><?php echo $this->Paginator->sort('amount'); ?></th>
 		<th><?php echo $this->Paginator->sort('sumprice'); ?></th>
 		<th><?php echo $this->Paginator->sort('saledate'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
 </tr>
 <?php foreach ($sales as $sale): ?>
 <tr>
@@ -23,11 +22,6 @@
 	<td><?php echo h($sale['Sale']['amount']); ?>&nbsp;</td>
 	<td><?php echo h($this->Number->currency($sale['Sale']['sumprice'],'￥')); ?>&nbsp;</td>
 	<td><?php echo h($sale['Sale']['saledate']); ?>&nbsp;</td>
-	<td class="actions">
-		<?php echo $this->Html->link(__('View'), array('action' => 'view', $sale['Sale']['id'])); ?>
-		<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $sale['Sale']['id'])); ?>
-		<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $sale['Sale']['id']), array(), __('Are you sure you want to delete # %s?', $sale['Sale']['id'])); ?>
-	</td>
 </tr>
 <?php endforeach; ?>
 </table>
