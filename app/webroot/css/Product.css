@@ -1,5 +1,41 @@
 @CHARSET "UTF-8";
 
+/*
+*
+*タッチスライド（スワイプ）で複数画像を左右にスライド
+*
+*/
+.touchslider-viewport{
+	width:300px;
+	height:300px;
+	overflow:hidden;
+	margin:0 auto;
+}
+.touchslider-nav-item{
+	padding:7px;
+	border:solid 1px #000000;
+	cursor:pointer;
+}
+.touchslider-prev,
+.touchslider-next{
+	cursor:pointer;
+}
+
+/*
+*
+*広告用、右側で画像を上下スクロール
+*
+*/
+#scrollArea{height:1000px;}
+#canvasBd{position:fixed; top:50%; left:80%; margin: -610px 0px 0px -610px;}
+#logoR{position:fixed; top:50%; left:80%; margin: 0px 0px 0px -50px;}
+
+
+/*
+*
+* Product
+*
+*/
 #products{
 	padding: 10px;
 	margin: 10px;

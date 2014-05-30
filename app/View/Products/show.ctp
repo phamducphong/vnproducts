@@ -1,3 +1,6 @@
+<?php echo $this->Html->script('scroll'); ?>
+<?php echo $this->Html->script('slide'); ?>
+<?php echo $this->Html->script('jquery.touchslider.js'); ?>
 <?php echo $this->Html->css('Product'); ?>
 
 
@@ -8,6 +11,41 @@
 	echo $this->Form->input('keyword', array('label'=>''));
 	echo $this->Form->end('Search');
 	?>
+</div>
+
+<!-- タッチスライド（スワイプ）で複数画像を左右にスライド -->
+<div class="clSlider">
+
+    <div class="touchslider-viewport" style="width:650px;overflow:hidden;position:relative;height:450px"><div>
+    	<?php foreach ($products as $product): ?>
+        <div class="touchslider-item">
+        	<?php
+        		$src = $product['Product']['picture'];
+        		$url = 'detail/' . $product['Product']['id'];
+        		echo $this->Html->image($src,array('alt'=>'ベトナム商品','url'=>$url)); ?>
+        </div>
+        <?php endforeach; ?>
+	</div></div>
+    
+    <br />
+
+    <div align="center">
+        <span class="touchslider-prev">←</span>
+        <span class="touchslider-nav-item touchslider-nav-item-current">●</span>
+        <span class="touchslider-nav-item">●</span>
+        <span class="touchslider-nav-item">●</span>
+        <span class="touchslider-nav-item">●</span>
+        <span class="touchslider-next">→</span>
+    </div>
+    
+</div><!--/clSlider-->
+
+
+
+<!-- 画像上下スクロール -->
+<div id="scrollAll">
+	<h1><?php echo $this->Html->image('nhatrang.jpg',array('id'=>'logoR')); ?></h1>
+	<canvas id="canvasBd" ></canvas>
 </div>
 
 

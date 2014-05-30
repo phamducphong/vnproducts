@@ -9,6 +9,7 @@ App::uses('AppController', 'Controller');
  */
 class ProductsController extends AppController {
 
+	public $helpers = array('Js');
 /**
  * Components
  *
@@ -17,7 +18,7 @@ class ProductsController extends AppController {
 	public $components = array('Paginator','Session','Auth');
 	
 	public function beforeFilter(){
-		$this->Auth->allow('*');
+		$this->Auth->allow();
 	}
 	
 /**

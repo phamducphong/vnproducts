@@ -1,5 +1,4 @@
 <?php echo $this->Html->css("Sale", null, array("inline"=>false)); ?>
-<?php echo $this->Html->script('jquery-2.1.1',array('inline'=>false))?>
 
 <?php 
 $script =<<<EOL
