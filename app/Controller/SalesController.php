@@ -118,7 +118,7 @@ class SalesController extends AppController {
 			$this->Sale->create();
 			if ($this->Sale->save($this->request->data)) {
 				$this->Session->setFlash(__('The sale has been saved.'));
-				return $this->redirect(array('action' => '.'));
+				return $this->redirect(array('action' => 'historySale'));
 			} else {
 				$this->Session->setFlash(__('The sale could not be saved. Please, try again.'));
 			}

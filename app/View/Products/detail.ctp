@@ -40,7 +40,7 @@
 <br>
 <div>
 	<?php
-		$url = array('controller'=>'sales','action'=>'createSale');
+		$url = array('controller'=>'sales','action'=>'createSale',$product['Product']['id']);
 		echo $this->Html->image('button12_cart_01.jpg', array('alt'=>'カートに入り','url'=>$url));
 	?>
 </div>
