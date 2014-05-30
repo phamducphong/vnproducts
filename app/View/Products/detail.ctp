@@ -18,9 +18,8 @@ $(document).ready(function(){
 	</dd>
 	<dt><?php echo __('Picture'); ?></dt>
 	<dd>
-		
-		<img id="image" src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=200px height=200px >
-		<span id="pop-up" style="position:fixed; display:none; right:10px;bottom:10px;"><img src="<?php echo $product['Product']['picture']; ?>"/></span>
+		<img id="image" src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=180px height=180px >
+		<span id="pop-up" style="position:absolute; display:none;"><img src="<?php echo $product['Product']['picture']; ?>"/></span>
 		&nbsp;
 	</dd>
 	<dt><?php echo __('Name'); ?></dt>

@@ -47,7 +47,14 @@
 	<?php foreach ($products as $product): ?>
 	<div id='product'>
 		<div id='product_catchcopy'><?php echo $product['Product']['catchcopy'];?></div>
-		<div id='product_picture'><img src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=180px height=180px ></div>
+		<div id='product_picture'>
+			<?php 
+				$picture = $product['Product']['picture'];
+				$url = array('controller'=>'products','action'=>'detail',$product['Product']['id']);
+				$option = array('alt'=>'no image','url'=>$url,'width'=>'180px','height'=>'180px');
+				echo $this->Html->image($picture,$option);
+			?>
+		</div>
 		<div id='product_name'><?php echo $product['Product']['name'];?></div>
 		<div id='product_price'><?php echo $this->Number->currency($product['Product']['price'],'￥');?></div>
 		<div id='product_maker'>
@@ -58,9 +65,9 @@
 			?>
 		</div>
 		<div id='product_detail'>
-			<?php 
-				$link = 'detail/' . $product['Product']['id'];
-				echo $this->Html->link('もっと見る', $link );
+			<?php
+				$url = array('controller'=>'products','action'=>'detail',$product['Product']['id']);
+				echo $this->Html->link('もっと見る', $url );
 			?>
 		</div>
 	</div>
@@ -75,13 +82,20 @@
 	<?php foreach ($Maker1Records as $product): ?>
 	<div id='product'>
 		<div id='product_catchcopy'><?php echo $product['Product']['catchcopy'];?></div>
-		<div id='product_picture'><img src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=180px height=180px ></div>
+		<div id='product_picture'>
+			<?php 
+				$picture = $product['Product']['picture'];
+				$url = array('controller'=>'products','action'=>'detail',$product['Product']['id']);
+				$option = array('alt'=>'no image','url'=>$url,'width'=>'180px','height'=>'180px');
+				echo $this->Html->image($picture,$option);
+			?>
+		</div>
 		<div id='product_name'><?php echo $product['Product']['name'];?></div>
 		<div id='product_price'><?php echo $this->Number->currency($product['Product']['price'],'￥');?></div>
 		<div id='product_detail'>
 			<?php 
-				$link = 'detail/' . $product['Product']['id'];
-				echo $this->Html->link('もっと見る', $link );
+				$url = array('controller'=>'products','action'=>'detail',$product['Product']['id']);
+				echo $this->Html->link('もっと見る', $url );
 			?>
 		</div>
 	</div>
@@ -93,13 +107,20 @@
 	<?php foreach ($Maker2Records as $product): ?>
 	<div id='product'>
 		<div id='product_catchcopy'><?php echo $product['Product']['catchcopy'];?></div>
-		<div id='product_picture'><img src="<?php echo $product['Product']['picture']; ?>" alt="no image" width=180px height=180px ></div>
+		<div id='product_picture'>
+			<?php 
+				$picture = $product['Product']['picture'];
+				$url = array('controller'=>'products','action'=>'detail',$product['Product']['id']);
+				$option = array('alt'=>'no image','url'=>$url,'width'=>'180px','height'=>'180px');
+				echo $this->Html->image($picture,$option);
+			?>
+		</div>
 		<div id='product_name'><?php echo $product['Product']['name'];?></div>
 		<div id='product_price'><?php echo $this->Number->currency($product['Product']['price'],'￥');?></div>
 		<div id='product_detail'>
 			<?php 
-				$link = 'detail/' . $product['Product']['id'];
-				echo $this->Html->link('もっと見る', $link );
+				$url = array('controller'=>'products','action'=>'detail',$product['Product']['id']);
+				echo $this->Html->link('もっと見る', $url );
 			?>
 		</div>
 	</div>
