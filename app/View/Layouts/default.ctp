@@ -41,11 +41,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, '/products/show'); ?></h1>
+			<h1><?php echo $this->Html->link($cakeDescription, array('controller'=>'products','action'=>'show')); ?></h1>
 			<div id="menu">
-				<?php echo $this->Html->link('ホーム', '/products/show'); ?> |
-				<?php echo '注文履歴'; ?> |
-				<?php echo $this->Html->link('ログアウト', '/users/logout'); ?>
+				<?php echo $this->Html->link('ホーム', array('controller'=>'products','action'=>'show')); ?> |
+				<?php echo $this->Html->link('注文履歴', array('controller'=>'sales','action'=>'historySale')); ?> |
+				<?php echo $this->Html->link('ログアウト', array('controller'=>'users','action'=>'logout')); ?>
 			</div>
 		</div>
 		<div id="content">

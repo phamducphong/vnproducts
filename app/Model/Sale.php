@@ -102,5 +102,28 @@ class Sale extends AppModel {
 			),
 		),
 	);
-
+	
+	public $belongsTo = array(
+	        'User' => array(
+	            'className'    => 'User',
+	            'foreignKey'   => 'userid'
+	        ),
+			'Product' => array(
+					'className'    => 'Product',
+					'foreignKey'   => 'productid'
+			)
+    );
+	
+	public function getSumpriceByUserid($userid=null){
+		$fields = array('userid','sum(sumprice) as sumprice');
+		$conditions = array('userid'=>$userid);
+		$group = array('userid');
+		
+		$ret = $this->find('all',array(
+				'fields'=>$fields,
+				'conditions'=>$conditions,
+				'group'=>$group
+		));
+		return $ret;
+	}
 }

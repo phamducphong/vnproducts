@@ -44,7 +44,7 @@
 
 <!-- 画像上下スクロール -->
 <div id="scrollAll">
-	<h1><?php echo $this->Html->image('nhatrang.jpg',array('id'=>'logoR')); ?></h1>
+	<?php echo $this->Html->image('nhatrang.jpg',array('id'=>'logoR','style'=>'width:300px;')); ?>
 	<canvas id="canvasBd" ></canvas>
 </div>
 

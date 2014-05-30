@@ -12,12 +12,14 @@ class SalesController extends AppController {
 	public $uses = array('Sale','User','Product');
 	public $helpers = array('js' => array('jquery'));
 	
+	
 /**
  * Components
  *
  * @var array
  */
 	public $components = array('Paginator','Session','Auth');
+	
 
 /**
  * index method
@@ -137,5 +139,30 @@ class SalesController extends AppController {
 			$this->request->data['Sale']['sumprice'] = $sumprice;
 			$this->request->data['Sale']['saledate'] = date('Y-m-d H:i:s');
 		}
+	}
+	
+/**
+ * historySale method
+ *
+ * @return void
+ */
+	public function historySale(){
+		
+		$userid = $this->Session->read('userid');
+		$conditions = array('userid'=>$userid);
+		$order = 'saledate desc';
+		$limit = 10;
+		
+		$this->paginate = array(
+				'conditions'=>$conditions,
+				'order'=>$order,
+				'limit'=>$limit,
+		);
+		$data = $this->paginate();
+		$this->set('sales', $data);
+		
+		
+		$sumprice = $this->Sale->getSumpriceByUserid($userid);
+		$this->set('sumprice',$sumprice);
 	}
 }
