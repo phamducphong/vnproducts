@@ -1,4 +1,4 @@
-<?php echo $this->Html->script('scroll'); ?>
+
 <?php echo $this->Html->script('slide'); ?>
 <?php echo $this->Html->script('jquery.touchslider.js'); ?>
 <?php echo $this->Html->css('Product'); ?>
@@ -16,7 +16,7 @@
 <!-- タッチスライド（スワイプ）で複数画像を左右にスライド -->
 <div class="clSlider">
 
-    <div class="touchslider-viewport" style="width:650px;overflow:hidden;position:relative;height:450px"><div>
+    <div class="touchslider-viewport" style="width:650px;overflow:hidden;position:relative;height:450px;"><div>
     	<?php foreach ($products as $product): ?>
         <div class="touchslider-item">
         	<?php
@@ -39,14 +39,6 @@
     </div>
     
 </div><!--/clSlider-->
-
-
-
-<!-- 画像上下スクロール -->
-<div id="scrollAll">
-	<?php echo $this->Html->image('nhatrang.jpg',array('id'=>'logoR','style'=>'width:300px;')); ?>
-	<canvas id="canvasBd" ></canvas>
-</div>
 
 
 <!-- 商品一覧 -->
